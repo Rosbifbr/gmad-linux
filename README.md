@@ -20,6 +20,19 @@ To extract an existing .gma file into another folder
 
 `gmad.exe extract -file "C:\steam\etc\garrysmod\addons\my_addon_12345.gma" -out "C:\this\folder"`
 
+Compiling NEW (Without Visual Studio)
+============
+- Bootil lib  and premake 5 are included for the sake of practicity.
+- Run premake5 on bootil and target linux_x64_release. Do not bother compiling for x86 
+- compile the lib with make
+- Follow the steps in 'compiling' section to generate GMAD's makefile, but target "gmake" instead of vs2017
+- run make on root
+- profit
+
+Some generic linux libraries/dependencies might be needed. All of them are available in Ubuntu's default APT repos as of 2023.
+
+While not guaranteed, compiling for BSD and MacOS should be trivial following this readme 
+
 Compiling
 =========
 
